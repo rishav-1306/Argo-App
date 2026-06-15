@@ -1,0 +1,10 @@
+:root {
+  --primary-1: #90A955;
+  --primary-2: #ECF39E;
+  --dark-1: #132A13;
+  --white: #FFFFFF;
+  --light: #F8F9FA;
+}
+body { margin: 0; font-family: 'Montserrat', sans-serif; background-color: var(--light); }
+.card { background: var(--white); border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); padding: 20px; }
+.btn-primary { background-color: var(--primary-1); color: var(--white); border: none; border-radius: 8px; padding: 10px 20px; cursor: pointer; font-weight: 600; }
