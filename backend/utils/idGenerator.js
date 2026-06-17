@@ -1,7 +1,7 @@
-const { v4: uuidv4 } = require('uuid');
+const crypto = require('crypto');
 
 const generateId = (prefix = '') => {
-  const short = uuidv4().split('-')[0];
+  const short = crypto.randomUUID().split('-')[0];
   return prefix ? `${prefix}_${short}` : short;
 };
 

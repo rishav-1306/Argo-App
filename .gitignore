@@ -3,3 +3,4 @@ node_modules/
 *.log
 db.json
 __test_export/
+.vercel

@@ -40,6 +40,7 @@ export const SHADOWS = {
   },
 };
 
-export const API_BASE_URL = 'http://192.168.31.199:5000/api'; // Physical device (your PC's IP)
+export const API_BASE_URL = 'https://argo-app-api.vercel.app/api'; // Vercel production
+// export const API_BASE_URL = 'http://192.168.31.199:5000/api'; // Local development (physical device)
 // export const API_BASE_URL = 'http://10.0.2.2:5000/api'; // Android emulator
 // export const API_BASE_URL = 'http://localhost:5000/api'; // Web / iOS simulator
