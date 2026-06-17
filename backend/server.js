@@ -43,15 +43,14 @@ app.use((req, res) => {
 // Error handler (must be last)
 app.use(errorHandler);
 
-// Start server
-const PORT = process.env.PORT || 5000;
-
-app.listen(PORT, () => {
-  console.log(`[SERVER] Argo App API running on port ${PORT}`);
-  console.log(`[SERVER] Environment: ${process.env.NODE_ENV || 'development'}`);
-
-  // Start cron jobs
-  startCronJobs();
-});
+// Start server (skip on Vercel — it handles the lifecycle)
+if (!process.env.VERCEL) {
+  const PORT = process.env.PORT || 5000;
+  app.listen(PORT, () => {
+    console.log(`[SERVER] Argo App API running on port ${PORT}`);
+    console.log(`[SERVER] Environment: ${process.env.NODE_ENV || 'development'}`);
+    startCronJobs();
+  });
+}
 
 module.exports = app;
